@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Projects.css';
 import { tagStyle } from '../skillColors.js';
+import { projectVisibility } from '../config.js';
 
 const projects = [
   {
@@ -88,13 +89,15 @@ function ProjectCard({ p }) {
 }
 
 export default function Projects() {
+  const visibleProjects = projects.filter(p => projectVisibility[p.name] !== false);
+
   return (
     <section className="section" id="projects">
       <h2 className="section-title">projects</h2>
       <p className="section-subtitle">// things I've built</p>
 
       <div className="projects-grid">
-        {projects.map((p, i) => (
+        {visibleProjects.map((p, i) => (
           <ProjectCard key={i} p={p} />
         ))}
       </div>

@@ -6,6 +6,7 @@ import Skills     from './components/Skills.jsx';
 import Experience from './components/Experience.jsx';
 import Projects   from './components/Projects.jsx';
 import Contact    from './components/Contact.jsx';
+import { features } from './config.js';
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
@@ -27,9 +28,9 @@ export default function App() {
       <main>
         <Intro />
         <About />
-        <Skills />
-        <Experience />
-        <Projects />
+        {features.showSkills     && <Skills />}
+        {features.showExperience && <Experience />}
+        {features.showProjects   && <Projects />}
         <Contact />
       </main>
       <footer style={{
