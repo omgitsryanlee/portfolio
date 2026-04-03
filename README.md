@@ -26,20 +26,6 @@ Built with React + Vite. Deployed on Vercel.
 
 ---
 
-## Structure
-
-```
-src/
-  components/    # One file per section (Intro, About, Skills, etc.)
-  index.css      # Global variables, reset, shared utilities
-  skillColors.js # Tag color mappings
-public/
-  resume.pdf
-  *.jpg / *.jpeg # Images
-```
-
----
-
 ## Design Decisions
 
 - No component library — keeps the bundle small and the styling intentional
