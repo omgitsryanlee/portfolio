@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Intro.css';
+import { features } from '../config.js';
 
 const roles = [
   'Software Engineer',
@@ -48,7 +49,7 @@ export default function Hero() {
         <div className="intro-cta">
           <a href="#experience" className="btn-primary">view my work</a>
           <a href="#contact" className="btn-secondary">get in touch</a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-secondary">view resume</a>
+          {features.showResume && <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-secondary">view resume</a>}
         </div>
         <div className="intro-links">
           <a href="mailto:ryanpg6817@gmail.com" aria-label="Email">
