@@ -9,7 +9,7 @@ export default function About() {
       <div className="about-grid">
         <div className="card about-card">
           <p>
-            I'm a <span className="highlight">CS student at UC Berkeley</span> (class of 2027),
+            I'm a <span className="highlight">CS student at UC Berkeley</span>,
             passionate about building software that's both technically rigorous and genuinely useful.
             I care about clean architecture, good API design, and the small details that make software feel{' '}
             <span className="highlight-pink">intuitive and enjoyable</span> to use.
