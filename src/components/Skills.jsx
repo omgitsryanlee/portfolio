@@ -4,17 +4,14 @@ import { tagStyle } from '../skillColors.js';
 const skillGroups = [
   {
     label: 'Languages',
-    icon: '{ }',
     skills: ['Python', 'Java', 'C', 'C++', 'SQL', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'RegEx'],
   },
   {
     label: 'Frameworks',
-    icon: '⚡',
     skills: ['React', 'Spring Boot', 'FastAPI', 'Node.js', 'Express', 'Vite', 'Angular', 'NumPy', 'Pandas', 'Matplotlib'],
   },
   {
     label: 'Tools',
-    icon: '🛠',
     skills: ['Git', 'Cypress', 'RESTful APIs', 'SQLAlchemy', 'GPT-4 API', 'Gemini API', 'Gmail API', 'OAuth 2.0'],
   },
 ];
@@ -29,7 +26,6 @@ export default function Skills() {
         {skillGroups.map(group => (
           <div className="card skill-group" key={group.label}>
             <div className="skill-group-header">
-              <span className="skill-icon">{group.icon}</span>
               <h3 className="skill-group-label">{group.label}</h3>
             </div>
             <div className="skill-tags">

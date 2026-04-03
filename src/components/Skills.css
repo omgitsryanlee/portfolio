@@ -16,11 +16,6 @@
   gap: 10px;
 }
 
-.skill-icon {
-  font-size: 1.1rem;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--accent);
-}
 
 .skill-group-label {
   font-family: 'JetBrains Mono', monospace;
