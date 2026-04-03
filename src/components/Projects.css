@@ -1,0 +1,211 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.flip-container {
+  height: 320px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform;
+  /* Don't capture mouse events — only .flip-container should */
+  pointer-events: none;
+}
+
+.flip-container.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.flip-face.flip-back {
+  transform: rotateY(180deg);
+}
+/* Faces don't capture mouse events — container is the only hover target */
+.flip-face {
+  pointer-events: none;
+}
+/* Re-enable pointer events only on the github button */
+.btn-view-project {
+  pointer-events: auto;
+}
+
+.project-folder {
+  margin-bottom: 4px;
+}
+.project-purple .project-folder,
+.project-folder.project-purple { color: var(--accent); }
+.project-pink .project-folder,
+.project-folder.project-pink   { color: var(--accent-2); }
+.project-gold .project-folder,
+.project-folder.project-gold   { color: #c9a84c; }
+.project-white .project-folder,
+.project-folder.project-white  { color: #aaaaaa; }
+.project-black .project-folder,
+.project-folder.project-black  { color: #555555; }
+
+.project-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.project-tagline {
+  font-size: 0.8rem;
+  color: var(--accent-2);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: -6px;
+}
+
+.front-tags {
+  margin-top: auto;
+}
+
+.flip-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.back-name {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: -4px;
+}
+
+.project-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-view-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+.btn-view-project:hover {
+  transform: translateY(-2px);
+  opacity: 0.88;
+}
+
+.btn-purple {
+  background: var(--accent);
+  color: #0d0d1a;
+}
+.btn-purple:hover {
+  box-shadow: 0 6px 20px var(--accent-glow);
+  color: #0d0d1a;
+}
+
+.btn-pink {
+  background: var(--accent-2);
+  color: #0d0d1a;
+}
+.btn-pink:hover {
+  box-shadow: 0 6px 20px var(--accent-2-glow);
+  color: #0d0d1a;
+}
+
+.btn-gold {
+  background: #c9a84c;
+  color: #0d0d1a;
+}
+.btn-gold:hover {
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+  color: #0d0d1a;
+}
+
+.btn-white {
+  background: #aaaaaa;
+  color: #0d0d1a;
+}
+.btn-white:hover {
+  box-shadow: 0 6px 20px rgba(170, 170, 170, 0.4);
+  color: #0d0d1a;
+}
+
+.btn-black {
+  background: #555555;
+  color: #f0f0f0;
+}
+.btn-black:hover {
+  box-shadow: 0 6px 20px rgba(85, 85, 85, 0.5);
+  color: #f0f0f0;
+}
+
+.project-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-2);
+  margin-top: auto;
+  opacity: 0.8;
+}
+
+.flip-container.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-container.flipped .project-purple {
+  border-color: var(--accent);
+  box-shadow: 0 8px 40px var(--accent-glow);
+}
+.flip-container.flipped .project-pink {
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 40px var(--accent-2-glow);
+}
+.flip-container.flipped .project-gold {
+  border-color: #c9a84c;
+  box-shadow: 0 8px 40px rgba(201, 168, 76, 0.3);
+}
+.flip-container.flipped .project-white {
+  border-color: #aaaaaa;
+  box-shadow: 0 8px 40px rgba(170, 170, 170, 0.3);
+}
+.flip-container.flipped .project-black {
+  border-color: #555555;
+  box-shadow: 0 8px 40px rgba(85, 85, 85, 0.4);
+}
+
+@media (max-width: 480px) {
+  .flip-container { height: 360px; }
+}
