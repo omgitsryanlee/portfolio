@@ -5,15 +5,6 @@ import { projectVisibility } from '../config.js';
 
 const projects = [
   {
-    name: 'Priority Matrix',
-    tagline: 'Full Stack Task Manager',
-    description:
-      'A full-stack task management app implementing the Eisenhower Matrix as an interactive real-time prioritization system. Service-oriented FastAPI backend with SQLAlchemy cleanly separates routing, business logic, and persistence.',
-    tags: ['React', 'JavaScript', 'HTML', 'CSS', 'FastAPI', 'SQLAlchemy', 'Python'],
-    color: 'white',
-    link: 'https://github.com/omgitsryanlee/PriorityMatrix',
-  },
-  {
     name: 'Leasing Emailer',
     tagline: 'Full Stack Email Automation',
     description:
@@ -21,6 +12,15 @@ const projects = [
     tags: ['React', 'JavaScript', 'HTML', 'CSS', 'Node.js', 'Express', 'Gmail API', 'OAuth 2.0'],
     color: 'gold',
     link: 'https://github.com/omgitsryanlee/LeasingEmailer',
+  },
+  {
+    name: 'Priority Matrix',
+    tagline: 'Full Stack Task Manager',
+    description:
+      'A full-stack task management app implementing the Eisenhower Matrix as an interactive real-time prioritization system. Service-oriented FastAPI backend with SQLAlchemy cleanly separates routing, business logic, and persistence.',
+    tags: ['React', 'JavaScript', 'HTML', 'CSS', 'FastAPI', 'SQLAlchemy', 'Python'],
+    color: 'white',
+    link: 'https://github.com/omgitsryanlee/PriorityMatrix',
   },
   {
     name: 'Dungeon Delve',
