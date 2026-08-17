@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar     from './components/Navbar.jsx';
 import Intro      from './components/Intro.jsx';
 import About      from './components/About.jsx';
@@ -43,6 +44,7 @@ export default function App() {
       }}>
         <span>built by <span style={{ color: 'var(--accent)' }}>ryan lee</span> · {new Date().getFullYear()}</span>
       </footer>
+      <Analytics />
     </>
   );
 }
