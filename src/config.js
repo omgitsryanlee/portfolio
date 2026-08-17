@@ -28,6 +28,7 @@ const hiddenProjects = (import.meta.env.VITE_HIDE_PROJECTS || '')
   .filter(Boolean);
 
 export const projectVisibility = {
+  'LiftLog':         !hiddenProjects.includes('LiftLog'),
   'Priority Matrix': !hiddenProjects.includes('Priority Matrix'),
   'Leasing Emailer': !hiddenProjects.includes('Leasing Emailer'),
   'Dungeon Delve':   !hiddenProjects.includes('Dungeon Delve'),

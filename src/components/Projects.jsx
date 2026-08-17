@@ -5,6 +5,16 @@ import { projectVisibility } from '../config.js';
 
 const projects = [
   {
+    name: 'LiftLog',
+    tagline: 'AI-Coached Workout Tracker',
+    description:
+      "A full-stack mobile workout tracker built with Expo (React Native) and Supabase. Plan routines, log live sessions with a rest timer and PR detection, track an 8-week volume trend per exercise, and get an AI coach — backed by the real Anthropic API, not rule-based heuristics — grounded in your own training history.",
+    tags: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'PostgreSQL', 'Claude API'],
+    color: 'purple',
+    link: null,
+    note: 'in active development — private repo, not yet released',
+  },
+  {
     name: 'Leasing Emailer',
     tagline: 'Full Stack Email Automation',
     description:
