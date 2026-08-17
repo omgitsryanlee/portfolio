@@ -17,7 +17,6 @@
   transform-style: preserve-3d;
   transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
   will-change: transform;
-  /* Don't capture mouse events — only .flip-container should */
   pointer-events: none;
 }
 
@@ -41,7 +40,7 @@
 .flip-face.flip-back {
   transform: rotateY(180deg);
 }
-/* Faces don't capture mouse events — container is the only hover target */
+/* Faces don't capture mouse events */
 .flip-face {
   pointer-events: none;
 }
@@ -123,26 +122,13 @@
   align-self: flex-start;
   transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
 }
-.btn-view-project:hover {
-  transform: translateY(-2px);
-  opacity: 0.88;
-}
 
 .btn-purple {
   background: var(--accent);
   color: #0d0d1a;
 }
-.btn-purple:hover {
-  box-shadow: 0 6px 20px var(--accent-glow);
-  color: #0d0d1a;
-}
-
 .btn-pink {
   background: var(--accent-2);
-  color: #0d0d1a;
-}
-.btn-pink:hover {
-  box-shadow: 0 6px 20px var(--accent-2-glow);
   color: #0d0d1a;
 }
 
@@ -150,26 +136,14 @@
   background: #c9a84c;
   color: #0d0d1a;
 }
-.btn-gold:hover {
-  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
-  color: #0d0d1a;
-}
 
 .btn-white {
   background: #aaaaaa;
   color: #0d0d1a;
 }
-.btn-white:hover {
-  box-shadow: 0 6px 20px rgba(170, 170, 170, 0.4);
-  color: #0d0d1a;
-}
 
 .btn-black {
   background: #555555;
-  color: #f0f0f0;
-}
-.btn-black:hover {
-  box-shadow: 0 6px 20px rgba(85, 85, 85, 0.5);
   color: #f0f0f0;
 }
 
